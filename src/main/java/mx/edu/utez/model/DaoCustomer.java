@@ -81,7 +81,7 @@ public class DaoCustomer {
         try{
             con = ConnectionMySQL.getConnection();
             if(insert){
-                String query = "INSERT INTO customers(customerNumber,customerName,contactLastname,contactFirstname,phone,addressLine1,addressLine2,city,state,postalCode,country,salesRepEmployeeNumber,creditLimit) values(?,?,,?,?,?,?,?,?,?,?,?,?,?);";
+                String query = "INSERT INTO customers(customerNumber,customerName,contactLastname,contactFirstname,phone,addressLine1,addressLine2,city,state,postalCode,country,salesRepEmployeeNumber,creditLimit) values(?,?,?,?,?,?,?,?,?,?,?,?,?);";
                 pstm = con.prepareStatement(query);
                 pstm.setInt(1, customer.getCustomerNumber());
                 pstm.setString(2, customer.getCustomerName());
